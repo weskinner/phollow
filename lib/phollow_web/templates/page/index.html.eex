@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col pt-3">
+    <div class="card mb-2">
+      <div class="card-body">
+        <h3 class="card-title"><%= @latest_show["showdate"]%> - <%= @latest_show["venue"] %></h4>
+        <p><%= raw @latest_show["setlistnotes"] %></p>
+        <hr>
+        <h5>Setlist</h5>
+        <div class="setlist-body">
+  <p><i>Soundcheck</i>: Back at the Chicken Shack, Catapult, Jam
+          
+  </p><p><span class="set-label">SET 1</span>:
+    <a href="/song/soul-planet" class="setlist-song" title="Soul Planet">Soul Planet</a> -&gt;  <a href="/song/possum" class="setlist-song" title="Possum">Possum</a>,  <a href="/song/mellow-mood" class="setlist-song" title="Mellow Mood">Mellow Mood</a>,   <a href="/song/tube" class="setlist-song" title="Tube">Tube</a> &gt;  <a href="/song/funky-bitch" class="setlist-song" title="Funky Bitch">Funky Bitch</a>,   <a href="/song/ocelot" class="setlist-song" title="Ocelot">Ocelot</a>,  <a href="/song/keepin-it-real" class="setlist-song" title="Keepin' It Real">Keepin' It Real</a>,  <a href="/song/my-friend-my-friend" class="setlist-song" title="My Friend, My Friend">My Friend, My Friend</a><sup title="No &quot;myfe&quot; ending.">[1]</sup> &gt;   <a href="/song/horn" class="setlist-song" title="Horn">Horn</a> &gt;  <a href="/song/maze" class="setlist-song" title="Maze">Maze</a>,  <a href="/song/miss-you" class="setlist-song" title="Miss You">Miss You</a>,  <a href="/song/run-like-an-antelope" class="setlist-song" title="Run Like an Antelope">Run Like an Antelope</a>             </p><p>
+              <span class="set-label">SET 2</span>:
+                <a data-toggle="tooltip" data-placement="top" href="/song/46-days" class="setlist-song" title="" data-original-title="364 Days later, the band delivers yet another strong Dick's version, continuing what is now an unmistakable tradition (see:  8/29/14; 9/4/15; 9/2/16; and 9/3/17). Mike's play is great, and Fish settles in nicely, riding his cymbals, the musicians establishing a theme that will carry through great versions of &quot;Tweezer&quot; and &quot;Golden Age&quot;. Trey's play in particular impresses, as he shears distinct blocks of sound as means to offer up great melodic / harmonic variation. Strong soloing bleeds to the first of two truly memorable ->.  ">46 Days</a> -&gt;  <a data-toggle="tooltip" data-placement="top" href="/song/tweezer" class="setlist-song" title="" data-original-title="An atypical (very improvisational) intro that heads into the jam segment about a minute early is just the start of a melodically-blessed version in which each band member is inspired and contributes mightily to a stellar  version with heavy Manteca teases into Golden Age.">Tweezer</a> -&gt;   <a data-toggle="tooltip" data-placement="top" href="/song/golden-age" class="setlist-song" title="" data-original-title="Nice -> from &quot;Tweezer&quot;. This jam is funky throughout and brightens into a bouncy, feel-good groove as it comes down the home stretch. ">Golden Age</a> &gt;  <a href="/song/steam" class="setlist-song" title="Steam">Steam</a> &gt;   <a href="/song/a-song-i-heard-the-ocean-sing" class="setlist-song" title="A Song I Heard the Ocean Sing">A Song I Heard the Ocean Sing</a> &gt;   <a href="/song/gotta-jibboo" class="setlist-song" title="Gotta Jibboo">Gotta Jibboo</a> &gt;  <a href="/song/suzy-greenberg" class="setlist-song" title="Suzy Greenberg">Suzy Greenberg</a> &gt;  <a href="/song/character-zero" class="setlist-song" title="Character Zero">Character Zero</a>             </p><p>
+              <span class="set-label">ENCORE</span>:
+                <a href="/song/the-horse" class="setlist-song" title="The Horse">The Horse</a> &gt;   <a href="/song/silent-in-the-morning" class="setlist-song" title="Silent in the Morning">Silent in the Morning</a> &gt;   <a href="/song/tweezer-reprise" class="setlist-song" title="Tweezer Reprise">Tweezer Reprise</a>    </p></div>
+        <hr>
+        <h5>Articles</h5>
+        <ul>
+          <li><a href="http://phish.net/blog/1536003060/dicks-n3-recap-better-than-curveball.html">DICK'S N3 RECAP: BETTER THAN CURVEBALL</a></li>
+          <li><a href="https://www.jambase.com/article/phish-concludes-summer-tour-2018-at-dicks-sporting-goods-park-recap-setlist-the-skinny">Phish Concludes Summer Tour 2018 At Dick’s Sporting Goods Park – Recap, Setlist & The Skinny</a></li>
+        </ul>
+      </div>
+    </div>
+    <%= for show <- @tour do %>
+      <div class="card mb-2">
+        <div class="card-body">
+          <h3 class="card-title"><%= show["showdate"]%> - <%= show["venue"] %></h4>
+          <p><%= raw show["setlistnotes"] %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

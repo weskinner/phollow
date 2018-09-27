@@ -1,0 +1,1 @@
+<p>Section where users can see all videos associated with any speicific time played of a song.  Will require a database of all shows and a scraping mechanism to gather the videos from youtube search api.  Also, a job to crawl youtube links and confirm they're still valid.</p>
